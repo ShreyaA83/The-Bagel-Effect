@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useSnapshot } from 'valtio';
 
-import config from '../config/config';
+import IP from '../assets/IP.png';
+import NF from '../assets/NF.png';
 import state from '../store';
 import { download } from '../assets';
-import { downloadCanvasToImage, reader } from '../config/helpers';
+import { downloadCanvasToImage, reader,  } from '../config/helpers';
 import { EditorTabs, FilterTabs, DecalTypes } from '../config/constants';
 import { fadeAnimation, slideAnimation } from '../config/motion';
 import { AIPicker, ColorPicker, CustomButton, FilePicker, Tab } from '../components';
+
 
 const Customizer = () => {
   const snap = useSnapshot(state);
@@ -24,7 +26,7 @@ const Customizer = () => {
     stylishShirt: false,
   })
 
-  // show tab content depending on the activeTab
+  
   const generateTabContent = () => {
     switch (activeEditorTab) {
       case "colorpicker":
@@ -98,7 +100,7 @@ const Customizer = () => {
         break;
     }
 
-    // after setting the state, activeFilterTab is updated
+   
 
     setActiveFilterTab((prevState) => {
       return {
@@ -171,6 +173,20 @@ const Customizer = () => {
               <button className='download-btn' onClick={downloadCanvasToImage}>
               <img
                 src={download}
+                alt='download_image'
+                className='w-3/5 h-3/5 object-contain'
+              />
+            </button>
+            <button className='download-btn' onClick={""}>
+              <img
+                src={IP}
+                alt='download_image'
+                className='w-3/5 h-3/5 object-contain'
+              />
+            </button>
+            <button className='download-btn' onClick={""}>
+              <img
+                src={NF}
                 alt='download_image'
                 className='w-3/5 h-3/5 object-contain'
               />

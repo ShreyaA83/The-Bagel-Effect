@@ -13,6 +13,7 @@
     "@react-three/drei": "^9.77.3",
     "@react-three/fiber": "^8.13.3",
     "@thirdweb-dev/storage": "^1.1.6",
+    "file-saver": "^2.0.5",
     "framer-motion": "^10.12.17",
     "fs": "^0.0.1-security",
     "maath": "^0.7.0",
