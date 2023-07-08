@@ -10,6 +10,7 @@ import {
     slideAnimation
 } from '../config/motion';
 
+import L from '../assets/1.png';
 const Home = () => {
 
     const snap=useSnapshot(state);
@@ -19,7 +20,7 @@ const Home = () => {
         {snap.intro && (
             <motion.section className="home" {...slideAnimation('left')}>
                 <motion.header {...slideAnimation("down")}>
-                    <img src="./threejs.png" 
+                    <img src={L}
                      alt=""
                      className="w-8 h-8 object-contain" />
                 </motion.header>
